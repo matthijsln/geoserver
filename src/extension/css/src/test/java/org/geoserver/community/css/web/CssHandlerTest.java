@@ -13,6 +13,7 @@ import org.geotools.styling.PolygonSymbolizer;
 import org.geotools.styling.SLD;
 import org.geotools.styling.StyledLayerDescriptor;
 import org.junit.Test;
+import java.io.InputStream;
 
 public class CssHandlerTest extends GeoServerSystemTestSupport {
 
@@ -24,5 +25,12 @@ public class CssHandlerTest extends GeoServerSystemTestSupport {
 
         PolygonSymbolizer ps = SLD.polySymbolizer(Styles.style(sld));
         assertNotNull(ps);
+    }
+
+    @Test
+    public void testCssHang() throws IOException {
+        InputStream hangs = this.getClass().getResourceAsStream("hang.css");
+        StyledLayerDescriptor sld = Styles.handler(CssHandler.FORMAT).parse(hangs, null, null, null);
+        assertNotNull(sld);
     }
 }

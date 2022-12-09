@@ -1,0 +1,74 @@
+/* Average buurt certificaat*/
+
+*{
+    fill-opacity:0.85;
+    stroke:black;
+    stroke-width: 0.3px;
+    stroke-opacity: 0.4;
+}
+
+/*zoom and label settings*/
+[@sd< 60000]{
+    label: [omschrijving] /*[label_results]*/;
+    font-fill: black;
+    halo-color: white;
+    halo-radius:1.5;
+    label-anchor: 0.5 0.5;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    -gt-label-auto-wrap: 60;
+}
+
+/*definition of categories*/
+/*@title A++++*/
+[average_buurt_certificaat>9][average_buurt_certificaat<=10]{
+    fill:#1b842f;
+}
+/*@title A+++*/
+[average_buurt_certificaat>8][average_buurt_certificaat <= 9]{
+    fill:#1b842f;
+    fill-opacity:0.9;
+}
+/*@title A++*/
+[average_buurt_certificaat >7][average_buurt_certificaat <= 8]{
+    fill:#1b842f;
+    fill-opacity:0.8;
+}
+/*@title A+*/
+[average_buurt_certificaat >6][average_buurt_certificaat <= 7]{
+    fill:#1b842f;
+    fill-opacity:0.7;
+}
+/*@title A*/
+[average_buurt_certificaat >5][average_buurt_certificaat <= 6]{
+    fill:#1a832e;
+    fill-opacity:0.64;
+}
+/*@title B*/
+[average_buurt_certificaat >4][average_buurt_certificaat <= 5]{
+    fill:#509d2b;
+    fill-opacity:0.7;
+}
+/*@title C*/
+[average_buurt_certificaat >3][average_buurt_certificaat <= 4]{
+    fill:#a6b757;
+    fill-opacity:0.6;
+}
+
+/*@title D*/
+[average_buurt_certificaat > 2][average_buurt_certificaat <= 3]{
+    fill:#fde801;
+}
+/*@title E*/
+[average_buurt_certificaat > 1][average_buurt_certificaat <= 2]{
+    fill:#e5a100;
+}
+/*@title F*/
+[average_buurt_certificaat >0][average_buurt_certificaat <= 1]{
+    fill:#df6019;
+}
+/*@title G*/
+[label_results = 'G']{
+    fill:#ce2e20;
+}
