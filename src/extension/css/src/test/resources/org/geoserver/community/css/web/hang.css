@@ -1,74 +1,34 @@
-/* Average buurt certificaat*/
-
-*{
-    fill-opacity:0.85;
-    stroke:black;
-    stroke-width: 0.3px;
-    stroke-opacity: 0.4;
+[a > 9][a <= 10] {
+    fill: #1b842f;
 }
-
-/*zoom and label settings*/
-[@sd< 60000]{
-    label: [omschrijving] /*[label_results]*/;
-    font-fill: black;
-    halo-color: white;
-    halo-radius:1.5;
-    label-anchor: 0.5 0.5;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    -gt-label-auto-wrap: 60;
+[a > 8][a <= 9] {
+    fill: #1b842f;
 }
-
-/*definition of categories*/
-/*@title A++++*/
-[average_buurt_certificaat>9][average_buurt_certificaat<=10]{
-    fill:#1b842f;
+[a > 7][a <= 8] {
+    fill: #1b842f;
 }
-/*@title A+++*/
-[average_buurt_certificaat>8][average_buurt_certificaat <= 9]{
-    fill:#1b842f;
-    fill-opacity:0.9;
+[a > 6][a <= 7] {
+    fill: #1b842f;
 }
-/*@title A++*/
-[average_buurt_certificaat >7][average_buurt_certificaat <= 8]{
-    fill:#1b842f;
-    fill-opacity:0.8;
+[a > 5][a <= 6] {
+    fill: #1a832e;
 }
-/*@title A+*/
-[average_buurt_certificaat >6][average_buurt_certificaat <= 7]{
-    fill:#1b842f;
-    fill-opacity:0.7;
+[a > 4][a <= 5] {
+    fill: #509d2b;
 }
-/*@title A*/
-[average_buurt_certificaat >5][average_buurt_certificaat <= 6]{
-    fill:#1a832e;
-    fill-opacity:0.64;
+/* Test succeeds when starting comment at the next line instead of line 23 */
+[a > 3][a <= 4] {
+    fill: #a6b757;
 }
-/*@title B*/
-[average_buurt_certificaat >4][average_buurt_certificaat <= 5]{
-    fill:#509d2b;
-    fill-opacity:0.7;
+/*[a > 2][a <= 3] {
+    fill: #fde801;
 }
-/*@title C*/
-[average_buurt_certificaat >3][average_buurt_certificaat <= 4]{
-    fill:#a6b757;
-    fill-opacity:0.6;
-}
-
-/*@title D*/
-[average_buurt_certificaat > 2][average_buurt_certificaat <= 3]{
-    fill:#fde801;
-}
-/*@title E*/
-[average_buurt_certificaat > 1][average_buurt_certificaat <= 2]{
-    fill:#e5a100;
-}
-/*@title F*/
-[average_buurt_certificaat >0][average_buurt_certificaat <= 1]{
-    fill:#df6019;
-}
-/*@title G*/
-[label_results = 'G']{
-    fill:#ce2e20;
+[a > 1][a <= 2] {
+    fill: #e5a100;
+}*/
+/*[a > 0][a <= 1] {
+    fill: #df6019;
+}*/
+[b = 'C'] {
+    fill: #ce2e20;
 }

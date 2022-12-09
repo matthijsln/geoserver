@@ -27,7 +27,7 @@ public class CssHandlerTest extends GeoServerSystemTestSupport {
         assertNotNull(ps);
     }
 
-    @Test
+    @Test(timeout = 5000)
     public void testCssHang() throws IOException {
         InputStream hangs = this.getClass().getResourceAsStream("hang.css");
         StyledLayerDescriptor sld = Styles.handler(CssHandler.FORMAT).parse(hangs, null, null, null);
